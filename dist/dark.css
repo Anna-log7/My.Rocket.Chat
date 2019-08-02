@@ -228,10 +228,10 @@ body,
 .flex-tab .user-view,
 .flex-tab .list-view,
 .contextual-bar,
+.contextual-bar__header,
 .rc-user-info-container {
   background-color: #2f3136;
 }
-.contextual-bar__header,
 .rc-user-info-details {
   background-color: #2a2c31;
 }
@@ -380,7 +380,11 @@ code,
   color: #7289da;
 }
 .emoji-picker {
-  background-color: #222327;
+  background-color: #2a2c31;
+  padding: 3px 5px 0px;
+}
+.emojis {
+  padding: 8px 0px 0px 4px;
 }
 .emoji-picker .emojis .emoji-list li:hover {
   background-color: #2a2c31;
