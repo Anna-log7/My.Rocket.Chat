@@ -89,7 +89,7 @@ body,
 .button,
 .button.primary,
 .rc-button {
-  background-color: #7289da;
+  background-color: #2f3136;
   color: #e2e7f7;
   border: none;
 }
@@ -97,7 +97,7 @@ body,
 .button.primary:hover,
 .rc-button:hover {
   color: #e2e7f7;
-  background-color: #5873d3;
+  background-color: #2a2c31;
   opacity: 1 !important;
 }
 .button[disabled],
