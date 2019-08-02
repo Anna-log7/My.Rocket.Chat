@@ -228,9 +228,12 @@ body,
 .flex-tab .user-view,
 .flex-tab .list-view,
 .contextual-bar,
-.contextual-bar__header,
 .rc-user-info-container {
   background-color: #2f3136;
+}
+.contextual-bar__header {
+  background-color: #2f3136;
+  border-bottom: 1px solid #2f3136;
 }
 .rc-user-info-details {
   background-color: #2a2c31;
