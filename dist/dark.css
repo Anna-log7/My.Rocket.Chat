@@ -231,6 +231,7 @@ body,
 .rc-user-info-container {
   background-color: #2f3136;
 }
+.contextual-bar__header,
 .rc-user-info-details {
   background-color: #2a2c31;
 }
@@ -378,8 +379,11 @@ code,
 .filter-item.active .category-link {
   color: #7289da;
 }
-.emoji-picker .emojis .emoji-list li:hover {
+.emoji-picker {
   background-color: #222327;
+}
+.emoji-picker .emojis .emoji-list li:hover {
+  background-color: #2a2c31;
 }
 .rc-old .message {
   margin-top: 40px;
@@ -487,6 +491,7 @@ code,
   color: #fff;
 }
 .rc-modal {
+  color: #fff;
   background-color: #2a2c31;
 }
 .rc-modal__footer {
@@ -1099,7 +1104,8 @@ code,
   margin-top: 6px;
 }
 .rc-popover__item:hover {
-  background-color: #26282c;
+  /*background-color: #26282c;*/
+  background-color: rgba(0, 0, 0, 0.3); /* @transparent-dark */
 }
 .rc-popover__divider {
   margin: 0.5em 0;
