@@ -186,12 +186,12 @@ body,
   -webkit-box-shadow: 0 1px 2px -1px #424449;
   box-shadow: 0 1px 2px -1px #424449;
 }
-.messages-box .start {
+/*.messages-box .start {
   color: #888;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
-}
+}*/
 .message a {
   color: #7289da;
 }
@@ -202,8 +202,8 @@ body,
   background-color: transparent;
 }
 .avatar {
-  -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
-  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+  /*-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);*/
 }
 .sidebar {
   -webkit-box-shadow: 1px 0 2px -1px rgba(0,0,0,0.5);
@@ -399,8 +399,8 @@ code,
   bottom: 4px;
   top: auto;
 }
-.rc-old .message::after {
-  /*border-top: 1px solid #3f4349;*/
+/*.rc-old .message::after {
+  border-top: 1px solid #3f4349;
   content: " ";
   display: block;
   left: 0;
@@ -408,8 +408,8 @@ code,
   position: absolute;
   top: -20px;
   width: 100%;
-}
-.rc-old .message.sequential {
+}*/
+/*.rc-old .message.sequential {
   padding-top: 0;
   margin-top: 0;
 }
@@ -419,17 +419,17 @@ code,
 .rc-old .message.sequential .message-actions {
   bottom: auto;
   top: 0;
-}
+}*/
 .rc-old .message.first-unread .body::before {
   background-color: #7289da;
-  top: -20px;
+  /*top: -20px;*/
 }
 .rc-old .message.first-unread .body::after {
   background-color: #36393e;
   color: #7289da;
-  top: -25px;
+  /*top: -25px;*/
 }
-.rc-old .message.first-unread.sequential {
+/*.rc-old .message.first-unread.sequential {
   margin-top: 10px;
 }
 .rc-old .message.first-unread.sequential .body::before {
@@ -437,7 +437,7 @@ code,
 }
 .rc-old .message.first-unread.sequential .body::after {
   top: -12px;
-}
+}*/
 .rc-old .message.first-unread.new-day::before {
   color: #7289da;
 }
@@ -1032,10 +1032,10 @@ code,
 .hljs .hljs-link {
   text-decoration: underline;
 }
-:root:root {
+/*:root:root {
   --rooms-list-title-text-size: 0.85rem;
   --popover-padding: 10px 0;
-}
+}*/
 /*.rooms-list__type {
   padding-bottom: 5px;
 }*/
@@ -1088,10 +1088,10 @@ code,
 .upload-progress-progress {
   z-index: 999;
 }
-.messages-box .start {
+/*.messages-box .start {
   margin-top: 0;
   padding: 20px 0;
-}
+}*/
 .contextual-bar__content {
   padding-top: 0;
 }
@@ -1120,10 +1120,10 @@ code,
 .rc-old .flex-tab-container .flex-tab .content .section {
   margin: 5px 20px;
 }
-.rc-header__name,
+/*.rc-header__name,
 .rc-header__block {
   font-size: 1.25rem;
-}
+}*/
 .rc-old .popup-user-avatar {
   height: 18px;
   margin: -4px 4px;
@@ -1134,4 +1134,11 @@ code,
 }
 .reply-preview .message {
   margin-top: 0px;
+}
+.room-leader.message:hover {
+  background-color: #2f3136;
+}
+.chat-now {
+  /*color: #e1e5e8;*/
+  color: var(--color-gray-light) !important;
 }
