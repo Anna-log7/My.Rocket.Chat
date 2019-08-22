@@ -199,7 +199,12 @@ body,
   color: #5873d3;
 }
 .message .mention-link {
-  background-color: transparent;
+  color: var(--mention-link-me-text-color);
+  background-color: var(--mention-link-me-background);
+}
+.message .mention-link--me {
+  color: var(--mention-link-text-color);
+  background-color: var(--mention-link-background);
 }
 .avatar {
   /*-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
