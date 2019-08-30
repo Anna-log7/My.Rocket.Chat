@@ -90,7 +90,6 @@ body,
 .button.primary,
 .rc-button {
   background-color: #2f3136;
-  color: #e2e7f7;
   border: none;
 }
 .button:hover,
@@ -105,6 +104,10 @@ body,
 .rc-button[disabled] {
   background-color: #54618c;
   color: #8c909a;
+  border: none;
+}
+.js-save {
+  border: 2px solid #e2e7f7;
 }
 .rc-button--outline {
   background-color: transparent;
@@ -202,9 +205,15 @@ body,
   color: var(--mention-link-me-text-color);
   background-color: var(--mention-link-me-background);
 }
+.message .mention-link:hover {
+  color: var(--mention-link-me-text-color);
+}
 .message .mention-link--me {
   color: var(--mention-link-text-color);
   background-color: var(--mention-link-background);
+}
+.message .mention-link--me:hover {
+  color: var(--mention-link-text-color);
 }
 .avatar {
   /*-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
