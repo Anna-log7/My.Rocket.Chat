@@ -109,6 +109,9 @@ body,
 .js-save {
   border: 2px solid #e2e7f7;
 }
+.js-logout {
+  color: #fff;
+}
 .rc-button--outline {
   background-color: transparent;
   border: 2px solid #7289da;
@@ -171,6 +174,10 @@ body,
   background-color: #787a7c;
   color: #32353a;
 }
+button.rc-button.setting-action.download-my-data,
+button.rc-button.setting-action.export-my-data {
+  color: #fff
+}
 .loading-animation > div,
 .main-content .loading-animation > div,
 .flex-tab .loading-animation > div {
@@ -195,6 +202,12 @@ body,
   font-weight: 700;
   font-size: 12px;
 }*/
+a {
+  color: #7289da;
+}
+a:hover {
+  color: #5873d3;
+}
 .message a {
   color: #7289da;
 }
@@ -736,6 +749,7 @@ code,
 }
 .rc-old .page-settings .section {
   border: none;
+  background: unset;
 }
 .rc-old .page-container table {
   margin-top: 10px;
@@ -795,11 +809,14 @@ code,
   border: none;
 }
 .rc-old .page-static .content .section .section-content {
-  background-color: #2a2c31;
+  /*background-color: #2a2c31;*/
 }
-.range-slider-range {
+/*.range-slider-range {
   background-color: #36383d;
   border-color: #36383d;
+}*/
+#notificationsSoundVolume {
+  background-color: unset;
 }
 .range-slider-range::-webkit-slider-thumb {
   background-color: #7289da;
