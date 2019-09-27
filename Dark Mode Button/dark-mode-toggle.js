@@ -118,9 +118,59 @@ function refreshAt(hours, minutes, seconds) {
     setTimeout(function() { window.location.reload(true); }, timeout);
 }
 
+function jiraLinker() {
+    console.log('Enabling JIRA linker...');
+    var msg;
+    var issue;
+    var isCodeBlock;
+    // const codeBlockRegex = /(`.*)(\n?)(jira:).*-\d+(\n?)(`.*)/;
+    const codeBlockRegex = /(`.*)(\n?)(jira:).*-\d+(.*)/;
+    const jiraRegex = /(jira:).*-\d+/g;
+    const issueRegex = /(?<=jira:).*-\d+/g;
+    var jiraLinked;
+    $('textarea.rc-message-box__textarea.js-input-message').on('keydown', function(e) {
+        // console.log(e);
+        if(e.key == 'Enter') {
+            // console.log('You pressed enter!');
+            msg = $('textarea.rc-message-box__textarea.js-input-message').val();
+            // console.log('Message: ' + msg);
+            isCodeBlock = codeBlockRegex.test(msg);
+            // console.log('Code block?: ' + isCodeBlock);
+            if (!isCodeBlock) {
+                jiraLinked = msg.replace(jiraRegex, function(jiraCall) {
+                    // console.log('jiraCall: ' + jiraCall);
+                    issue = jiraCall.match(issueRegex);
+                    // console.log('issue: ' + issue);
+                    return '[' + issue + '](https://www.bcgsc.ca/jira/browse/' + issue + ')';
+                })
+                // console.log(jiraLinked);
+                $('textarea.rc-message-box__textarea.js-input-message').val(jiraLinked);
+                // console.log($('textarea.rc-message-box__textarea.js-input-message').val());
+            }
+        }
+    });
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function addJiraLinker() {
+    $('.sidebar-item').on('click', async function() {
+        // console.log('click');
+        do {
+            console.log("... waiting for textarea");
+            await sleep(100);
+        } while (!$('textarea.rc-message-box__textarea.js-input-message')[0])
+        jiraLinker();
+    });
+}
+
 $( function() {
     refreshAt(18,00,0); //Will refresh the page at 6:00pm
-    ThemeEnabler.onAppLoaded()
+    ThemeEnabler.onAppLoaded();
+    jiraLinker();
+    addJiraLinker();
 });
 
 // console.log("Custom script executed...");
