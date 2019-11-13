@@ -422,10 +422,10 @@ code,
 /*.rc-old .message {
   margin-top: 40px;
 }*/
-.rc-old .message .message-actions {
+/*.rc-old .message .message-actions {
   bottom: 4px;
   top: auto;
-}
+}*/
 /*.rc-old .message::after {
   border-top: 1px solid #3f4349;
   content: " ";
@@ -471,14 +471,14 @@ code,
 .rc-old .message.first-unread.new-day::after {
   border-color: #7289da;
 }
-.rc-old .compact .message {
+/*.rc-old .compact .message {
   min-height: 0;
   padding-top: 2px;
   padding-bottom: 2px;
-}
-.rc-old .compact .message .message-actions {
+}*/
+/*.rc-old .compact .message .message-actions {
   bottom: 0;
-}
+}*/
 .message .reactions > li {
   background-color: #2a2c31;
   border-color: #2a2c31;
