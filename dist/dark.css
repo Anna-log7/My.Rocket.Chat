@@ -86,19 +86,115 @@ body,
 .secondary-font-color {
   color: #e2e7f7;
 }
-.button,
-.button.primary,
-.rc-button {
-  background-color: #2f3136;
+.js-save {
+  border: 2px solid #e2e7f7;
+}
+.js-logout {
+  color: #fff;
+}
+
+/*Buttons*/
+
+.button.danger,
+.rc-button.cancel {
+  background-color: #f04747;
+  color: #fff;
   border: none;
 }
+
+.button.danger:hover,
+.rc-button.cancel:hover {
+  background-color: #ee2a2a;
+  color: #fff;
+  opacity: 1 !important;
+}
+
+.button.danger[disabled],
+.rc-button.cancel[disabled] {
+  background-color: #934042;
+  color: #99898c;
+}
+
+.rc-button.cancel.rc-button--outline {
+  background-color: transparent;
+  border: 2px solid #f04747;
+  color: #f04747;
+}
+
+.rc-button.cancel.rc-button--outline:hover {
+  background-color: transparent;
+  border-color: #ee2a2a;
+  color: #ee2a2a;
+}
+
+.rc-button.cancel.rc-button--outline[disabled] {
+  background-color: transparent;
+  border-color: #934042;
+  color: #934042;
+}
+
+.rc-button--outline {
+  background-color: transparent;
+  border: 2px solid #7289da;
+  color: #7289da;
+}
+
+.rc-button--outline:hover {
+  background-color: transparent;
+  border-color: #5873d3;
+  color: #5873d3;
+}
+
+.rc-button--outline[disabled] {
+  background-color: transparent;
+  border-color: #54618c;
+  color: #54618c;
+}
+
+.button.secondary,
+.rc-button--secondary {
+  background-color: #bbb;
+  color: #2a2c31;
+}
+
+.button.secondary:hover,
+.rc-button--secondary:hover {
+  background-color: #a8a8a8;
+  color: #2a2c31;
+  opacity: 1 !important;
+}
+
+.button.secondary[disabled],
+.rc-button--secondary[disabled] {
+  background-color: #787a7c;
+  color: #32353a;
+}
+
+button.rc-button.setting-action.download-my-data,
+button.rc-button.setting-action.export-my-data {
+  color: #fff
+}
+
+.js-close {
+  background-color: #5873d3;
+  color: #fff;
+  border: none;
+}
+
+/*.button,
+.button.primary,
+.rc-button {
+  border: none;
+}*/
+
 .button:hover,
 .button.primary:hover,
 .rc-button:hover {
-  color: #e2e7f7;
+  color: #fff;
   background-color: #2a2c31;
   opacity: 1 !important;
 }
+
 .button[disabled],
 .button.primary[disabled],
 .rc-button[disabled] {
@@ -106,78 +202,7 @@ body,
   color: #8c909a;
   border: none;
 }
-.js-save {
-  border: 2px solid #e2e7f7;
-}
-.js-logout {
-  color: #fff;
-}
-.rc-button--outline {
-  background-color: transparent;
-  border: 2px solid #7289da;
-  color: #7289da;
-}
-.rc-button--outline:hover {
-  background-color: transparent;
-  border-color: #5873d3;
-  color: #5873d3;
-}
-.rc-button--outline[disabled] {
-  background-color: transparent;
-  border-color: #54618c;
-  color: #54618c;
-}
-.button.danger,
-.rc-button--cancel {
-  background-color: #f04747;
-  color: #fcdada;
-}
-.button.danger:hover,
-.rc-button--cancel:hover {
-  background-color: #ee2a2a;
-  color: #fcdada;
-  opacity: 1 !important;
-}
-.button.danger[disabled],
-.rc-button--cancel[disabled] {
-  background-color: #934042;
-  color: #99898c;
-}
-.rc-button--cancel.rc-button--outline {
-  background-color: transparent;
-  border: 2px solid #f04747;
-  color: #f04747;
-}
-.rc-button--cancel.rc-button--outline:hover {
-  background-color: transparent;
-  border-color: #ee2a2a;
-  color: #ee2a2a;
-}
-.rc-button--cancel.rc-button--outline[disabled] {
-  background-color: transparent;
-  border-color: #934042;
-  color: #934042;
-}
-.button.secondary,
-.rc-button--secondary {
-  background-color: #bbb;
-  color: #2a2c31;
-}
-.button.secondary:hover,
-.rc-button--secondary:hover {
-  background-color: #a8a8a8;
-  color: #2a2c31;
-  opacity: 1 !important;
-}
-.button.secondary[disabled],
-.rc-button--secondary[disabled] {
-  background-color: #787a7c;
-  color: #32353a;
-}
-button.rc-button.setting-action.download-my-data,
-button.rc-button.setting-action.export-my-data {
-  color: #fff
-}
+
 .loading-animation > div,
 .main-content .loading-animation > div,
 .flex-tab .loading-animation > div {
@@ -700,24 +725,29 @@ code,
 .rc-member-list__counter {
   color: #bbb;
 }
-.rc-user-info__scroll .rc-switch-double__label.disabled {
-  color: #595a5d;
-}
 .rc-user-info__scroll .rc-switch-double__label {
+  color: #fff;
+}
+.rc-user-info__scroll .rc-switch-double__label.disabled {
   color: #bbb;
 }
 .channel-settings .rc-switch-double__label {
-  color: #595a5d;
+  color: #fff;
 }
 .channel-settings .rc-switch-double__label.disabled {
   color: #bbb;
 }
+
+/*Chat file list*/
+
+.attachments__item:hover, .attachments__item:active {
+  background-color: #2a2c31 !important;
+}
+
 .attachments__name {
-  color: #c2c3c5;
+  color: #c2c3c5 !important;
 }
-.attachments__item:hover {
-  background-color: #2a2c31;
-}
+
 .rc-table {
   color: #c2c3c5;
 }
