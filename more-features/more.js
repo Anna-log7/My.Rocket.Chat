@@ -173,8 +173,12 @@ function addJiraLinker() {
     });
 }
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 $( function() {
-    refreshAt(23,00,0); //Will refresh the page at 11:00pm
+    refreshAt(23, getRndInteger(0,59), getRndInteger(0,59)); //Will refresh the page at 11:00pm
     ThemeEnabler.onAppLoaded();
     jiraLinker();
     addJiraLinker();
